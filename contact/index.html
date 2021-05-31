@@ -14,8 +14,7 @@
 <body>
 	<div class="container">
 		<h1>Contact Us</h1>
- 	<!--	<form id="contact" method="POST" action="https://my.workers.dev"> --> 
-            <form id="contact" method="POST" action="https://contact.lucidmarketing.in">  
+		<form id="contact" method="POST" action="https://contact.lucidmarketing.in">
 			<div class="form-group">
 				<label>Name
 					<input name="name" type="text" class="form-control required" placeholder="John Doe">
@@ -44,14 +43,14 @@
  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lf_LgIbAAAAAKhvj2PIxGtSksUq9ihpEC2CMAW3"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lf_LgIbAAAAAKhvj2PIxGtSksUq9ihpEC2CMAW3"></script>
 	<script>
 		// Add recaptcha token and enable the submit button
 		grecaptcha.ready(reloadRecaptcha);
  
 		function reloadRecaptcha()
 		{
-			grecaptcha.execute('6LfCigEbAAAAADZ0ypL4g0vVx2tmjqllF436h6C6', {action: 'contact'}).then(function(token) {
+			grecaptcha.execute('6Lf_LgIbAAAAAKhvj2PIxGtSksUq9ihpEC2CMAW3', {action: 'contact'}).then(function(token) {
 				let $form = jQuery('#contact');
  
 				$form.find('input[name=g-recaptcha-response]').val(token);
